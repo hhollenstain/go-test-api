@@ -1,12 +1,10 @@
 package main
 
 import (
-
 	"fmt"
-	"net/http"
 	"log"
 	"math/rand"
-
+	"net/http"
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
@@ -15,8 +13,8 @@ func Index(w http.ResponseWriter, r *http.Request) {
 
 func Bender(w http.ResponseWriter, r *http.Request) {
 	lines, err := readLines("bender_lines.txt")
-  if err != nil {
-    log.Fatalf("readLines: %s", err)
-  }
-  fmt.Fprint(w, lines[rand.Intn(len(lines))])
+	if err != nil {
+		log.Fatalf("readLines: %s", err)
+	}
+	fmt.Fprint(w, lines[rand.Intn(len(lines))])
 }
