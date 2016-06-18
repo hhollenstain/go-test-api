@@ -19,8 +19,20 @@ var routes = Routes{
 		Index,
 	},
 	Route{
+		"Index",
+		"HEAD",
+		"/",
+		Index,
+	},
+	Route{
 		"Bender",
 		"GET",
+		"/bender",
+		Bender,
+	},
+	Route{
+		"Bender",
+		"HEAD",
 		"/bender",
 		Bender,
 	},
